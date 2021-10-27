@@ -12,8 +12,11 @@ Traveller.init({
         type: DataTypes.STRING
     },
     email: {
-        type: DataTypes.STRING
-        // Single line to validate email?
+        type: DataTypes.STRING,
+        unique:true,
+        validate:{
+            isEmail:true
+        }
     },
     age: {
         type: DataTypes.INTEGER
