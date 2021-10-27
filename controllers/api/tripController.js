@@ -1,20 +1,16 @@
-const Traveller = require("./Traveller");
-const Trip = require("./Trip");
-const Location = require("./Location");
+const express = require('express');
+const router = express.Router();
+const {Location,Traveller,Trip} = require('../../models');
+const bcrypt = require("bcrypt");
 
-Traveller.hasMany(Trip,{
-    onDelete:"CASCADE"
+router.post("/",(req,res)=>{
+    //It's done when the POST route /api/trips creates trip data between associated travellers and locations.
+    
 });
-Trip.belongsTo(Traveller);
 
-Trip.hasMany(Location, {
-    onDelete:"CASCADE"
+
+router.delete("/:id",(req,res)=>{
+    // It's done when the DELETE route /api/trips/:id removes a trip and returns a successful response in Insomnia Core.
+
+
 });
-Location.belongsTo(Trip);
-
-
-module.exports={
-    Traveller,
-    Trip,
-    Location
-};
