@@ -4,11 +4,6 @@ const sequelize = require('../config/connection');
 class Traveller extends Model { }
 
 Traveller.init({
-    // id: {
-    //     // PRIMARY KEY
-    //     type: DataTypes.INTEGER,
-    //     primaryKey
-    // },
     name: {
         type: DataTypes.STRING
     },

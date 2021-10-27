@@ -3,15 +3,16 @@ const Trip = require("./Trip");
 const Location = require("./Location");
 
 Traveller.hasMany(Trip,{
-    onDelete:"CASCADE"
+    onDelete:"CASCADE",
+    foreignKey:"traveller_id"
 });
 Trip.belongsTo(Traveller);
 
-Trip.hasMany(Location,{
-    onDelete:"CASCADE"
+Location.hasMany(Trip,{
+    onDelete:"CASCADE",
+    foreignKey:"traveller_id"
 });
-Location.belongsTo(Trip);
-
+Trip.belongsTo(Location);
 
 module.exports={
     Location,

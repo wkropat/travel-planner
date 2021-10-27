@@ -27,3 +27,4 @@ router.delete("/:id",(req,res)=>{
         res.json(delTrip)
     })
 });
+module.exports = router;

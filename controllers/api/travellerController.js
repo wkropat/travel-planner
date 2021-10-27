@@ -60,3 +60,5 @@ router.delete("/:id",(req,res)=>{
         res.json(delTraveller)
     })
 });
+
+module.exports = router;

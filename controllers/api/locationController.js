@@ -58,3 +58,5 @@ router.delete("/:id",(req,res)=>{
         res.json(delLocation)
     })
 });
+
+module.exports = router;

@@ -4,14 +4,15 @@ const sequelize = require('../config/connection');
 class Location extends Model { }
 
 Location.init({
-    // id: {
-    //     // PRIMARY KEY
-    //     type: DataTypes.INTEGER,
-    //     primaryKey
-    // },
     location_name: {
         type: DataTypes.STRING
-    }
+    },   
+    traveller_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'traveller',
+          key: 'id',
+        },}
 }, {
     sequelize,
 });
