@@ -4,13 +4,18 @@ const sequelize = require('../config/connection');
 class Trip extends Model {}
 
 Trip.init({
-  name:{
+    id:{
+        type:DataTypes.INTEGER,
+    },
+  trip_budget:{
+      type:DataTypes.DOUBLE
+  },
+  traveller_id:{
+      //non-unique foreign key that references the Traveller model's id field (Traveller.id)
       type:DataTypes.STRING
   },
-  species:{
-      type:DataTypes.STRING
-  },
-  age:{
+  location_id:{
+      //non-unique foreign key that references the Location model's id field (Location.id)
       type:DataTypes.INTEGER
   },
 },{

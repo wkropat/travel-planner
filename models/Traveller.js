@@ -1,20 +1,25 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Traveller extends Model {}
+class Traveller extends Model { }
 
 Traveller.init({
-  name:{
-      type:DataTypes.STRING
-  },
-  species:{
-      type:DataTypes.STRING
-  },
-  age:{
-      type:DataTypes.INTEGER
-  },
-},{
-    sequelize, 
+    id: {
+        // PRIMARY KEY
+        type: DataTypes.INTEGER,
+    },
+    name: {
+        type: DataTypes.STRING
+    },
+    email: {
+        type: DataTypes.STRING
+        // Single line to validate email?
+    },
+    age: {
+        type: DataTypes.INTEGER
+    },
+}, {
+    sequelize,
 });
 
-module.exports=Traveller
+module.exports = Traveller
