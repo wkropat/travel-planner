@@ -18,10 +18,7 @@ Traveller.init({
         validate:{
             isEmail:true
         }
-    },
-    age: {
-        type: DataTypes.INTEGER
-    },
+    }
 }, {
     sequelize,
 });
