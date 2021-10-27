@@ -1,0 +1,26 @@
+{
+  "name": "travel-planner",
+  "version": "1.0.0",
+  "description": "In this mini-project, you will work with a group to build an API using Node.js, Express.js, MySQL, and Sequelize, and you will deploy it to Heroku.",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.14",
+    "sequelize": "^6.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "seed": "npm seeds/seed.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wkropat/travel-planner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wkropat/travel-planner/issues"
+  },
+  "homepage": "https://github.com/wkropat/travel-planner#readme"
+}
